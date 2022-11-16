@@ -1,9 +1,14 @@
 import { mount } from "enzyme";
 import React from "react";
+import Root from "../../Root";
 import Commentbox from "../CommentBox";
 let wrapper;
 beforeEach(() => {
-  wrapper = mount(<Commentbox />);
+    wrapper = mount(
+      <Root>
+        <Commentbox />
+      </Root>
+    );
 });
 afterEach(() => {
   wrapper.unmount();
@@ -11,8 +16,8 @@ afterEach(() => {
 it("has text in text area", () => {
   expect(wrapper.find("textarea").length).toEqual(1);
 });
-it("has text in text area", () => {
-  expect(wrapper.find("button").length).toEqual(1);
+it("has text in text area and 2 buttons", () => {
+  expect(wrapper.find("button").length).toEqual(2);
 });
 it("is typeable ", () => {
     wrapper.find("textarea").simulate("change", { target: { value: "hi" } });

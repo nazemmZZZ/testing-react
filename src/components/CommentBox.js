@@ -13,13 +13,16 @@ import * as action from "../actions";
    }
   render() {
     return (
-      <form onSubmit={ this.handleSubmit}>
-        <h4>add comment</h4>
-        <textarea value={this.state.Comment} onChange={ this.handleChange} />
-        <div>
-          <button>submit</button>
-        </div>
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <h4>add comment</h4>
+          <textarea value={this.state.Comment} onChange={this.handleChange} />
+          <div>
+            <button>submit</button>
+          </div>
         </form>
+        <button className='fetch-comments' onClick={this.props.fetchComments}>fetch comments</button>
+      </div>
     );
   }
 }
