@@ -11,6 +11,7 @@ export class CommentList extends Component {
   render() {
     return (
       <div>
+        <h1>comments</h1>
         <ul>
           {this.getComment()}
         </ul>

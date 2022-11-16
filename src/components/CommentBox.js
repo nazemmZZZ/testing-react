@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as action from "../actions";
+import reqierauth from './reqierauth';
  class Commentbox extends Component {
    state = { Comment: '' }
    handleChange = event => {
@@ -26,4 +27,5 @@ import * as action from "../actions";
     );
   }
 }
-export default connect(null,action) (Commentbox)
+
+export default connect(null,action) (reqierauth(Commentbox))
