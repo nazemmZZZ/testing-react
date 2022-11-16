@@ -1,10 +1,11 @@
+import React, { Component } from 'react'
 
-import React from 'react'
-
-const CommentList = () => {
-  return (
-    <div>CommentList</div>
-  )
+export class CommentList extends Component {
+  render() {
+    return (
+      <div>CommentList</div>
+    )
+  }
 }
 
 export default CommentList

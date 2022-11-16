@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import CommentBox from './components/CommentBox';
-import CommentList from './components/commentList';
+import logo from "./logo.svg";
+import React from "react";
+import CommentBox from "./components/CommentBox";
+import CommentList from "./components/CommentList";
 function App() {
   return (
     <div className="App">
       <CommentBox />
-      <CommentList/>
+      <CommentList />
     </div>
   );
 }
